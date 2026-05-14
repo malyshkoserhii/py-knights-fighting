@@ -2,12 +2,10 @@ from app.types.knight_type import KnightType
 
 
 class Battle:
-    def __init__(self, knight: KnightType) -> None:
-        self.knight = knight
-
     @staticmethod
     def fight(power: int, protection: int) -> int:
         return power - protection
 
-    def check_hp_results(self) -> int:
-        return 0 if self.hp <= 0 else self.hp
+    @staticmethod
+    def check_hp_results(knight: KnightType) -> int:
+        return 0 if knight.hp <= 0 else knight.hp
