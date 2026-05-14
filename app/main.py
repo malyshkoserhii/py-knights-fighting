@@ -1,10 +1,8 @@
 from app.constants.knights import KNIGHTS
 from app.units.knight import Knight
 from app.actions.battle import Battle
-from app.types.battle_result_type import BattleResultType
 
-
-def battle(knights_config: dict) -> BattleResultType:
+def battle(knights_config: dict) -> dict[str, int]:
     # BATTLE PREPARATIONS:
 
     # lancelot
