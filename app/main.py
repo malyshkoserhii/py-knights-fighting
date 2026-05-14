@@ -2,48 +2,29 @@ from app.constants.knights import KNIGHTS
 from app.units.knight import Knight
 from app.actions.battle import Battle
 
+
 def battle(knights_config: dict) -> dict[str, int]:
     # BATTLE PREPARATIONS:
 
     # lancelot
     lancelot_stats = knights_config["lancelot"]
     lancelot = Knight(knight=lancelot_stats, protection=0)
-    # apply armour
-    lancelot.apply_armor()
-    # apply weapon
-    lancelot.apply_weapon()
-    # apply potion if exist
-    lancelot.apply_potion()
+    lancelot.prepare_for_battle()
 
     # arthur
     arthur_stats = knights_config["arthur"]
     arthur = Knight(knight=arthur_stats, protection=0)
-    # apply armour
-    arthur.apply_armor()
-    # apply weapon
-    arthur.apply_weapon()
-    # apply potion if exist
-    arthur.apply_potion()
+    arthur.prepare_for_battle()
 
     # mordred
     mordred_stats = knights_config["mordred"]
     mordred = Knight(knight=mordred_stats, protection=0)
-    # apply armour
-    mordred.apply_armor()
-    # apply weapon
-    mordred.apply_weapon()
-    # apply potion if exist
-    mordred.apply_potion()
+    mordred.prepare_for_battle()
 
     # red_knight
     red_knight_stats = knights_config["red_knight"]
     red_knight = Knight(knight=red_knight_stats, protection=0)
-    # apply armour
-    red_knight.apply_armor()
-    # apply weapon
-    red_knight.apply_weapon()
-    # apply potion if exist
-    red_knight.apply_potion()
+    red_knight.prepare_for_battle()
 
     # -------------------------------------------------------------------------------
     # BATTLE:

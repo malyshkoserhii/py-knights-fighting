@@ -28,3 +28,8 @@ class Knight:
 
             if "hp" in self.potion["effect"]:
                 self.hp += self.potion["effect"]["hp"]
+
+    def prepare_for_battle(self) -> None:
+        self.apply_armor()
+        self.apply_weapon()
+        self.apply_potion()
