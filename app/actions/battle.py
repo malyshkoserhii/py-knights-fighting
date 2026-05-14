@@ -1,4 +1,4 @@
-from app.types.knight_type import KnightType
+from app.units.knight import Knight
 
 
 class Battle:
@@ -7,5 +7,5 @@ class Battle:
         return power - protection
 
     @staticmethod
-    def check_hp_results(knight: KnightType) -> int:
+    def check_hp_results(knight: Knight) -> int:
         return 0 if knight.hp <= 0 else knight.hp
